@@ -1,0 +1,33 @@
+@use '@common/scss/variables.scss' as *;
+@use '@common/scss/breakpoints.scss' as *;
+
+@use './header.scss';
+@use './carousel.scss';
+@use './footer.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-base;
+  background-color: $color-white;
+  color: $color-text-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

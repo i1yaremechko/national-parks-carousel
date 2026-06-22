@@ -5,7 +5,7 @@ export default defineConfig({
   root: './',
   resolve: {
     alias: {
-      '@common': resolve(__dirname, './src/features/common')
+      '@common': resolve(__dirname, './src/common')
     }
   },
   server: {

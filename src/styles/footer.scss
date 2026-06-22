@@ -1,0 +1,98 @@
+@use '@common/scss/variables.scss' as *;
+@use '@common/scss/breakpoints.scss' as *;
+
+.footer {
+  background-color: $color-bg-light;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  margin-top: auto;
+  width: 100%;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-title;
+    font-size: 1.2rem;
+    color: $color-text-main;
+    font-weight: bold;
+  }
+
+  &__logo-icon {
+    font-size: 1.3rem;
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-base;
+    font-size: 0.9rem;
+    color: $color-text-muted;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color-text-main;
+    font-weight: 400;
+  }
+
+  &__logo-img {
+    height: 16px;
+    width: auto;
+    display: block;
+  }
+
+  &__author-highlight {
+    font-weight: 700;
+    color: $color-text-main;
+  }
+
+  &__copyright {
+    font-size: 0.85rem;
+  }
+
+  &__right {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: $color-white;
+    color: $color-text-main;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@include respond-to('tablet') {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+}
