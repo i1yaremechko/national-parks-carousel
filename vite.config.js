@@ -13,7 +13,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@common': fileURLToPath(new URL('./src/common', import.meta.url)),
-      '@features': fileURLToPath(new URL('./src/features', import.meta.url)),
       '@styles': fileURLToPath(new URL('./src/styles', import.meta.url))
     }
   },
