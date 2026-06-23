@@ -41,6 +41,8 @@ export const initParkCarousel = async () => {
   btnPrev = document.getElementById(CAROUSEL_SELECTORS.PREV_BTN_ID);
   btnNext = document.getElementById(CAROUSEL_SELECTORS.NEXT_BTN_ID);
 
+  const loader = document.getElementById('global-loader');
+
   if (!track) return;
 
   try {
@@ -56,6 +58,8 @@ export const initParkCarousel = async () => {
     btnNext?.addEventListener('click', () => moveSlide(1));
   } catch (error) {
     console.error('Error initializing park carousel:', error.message);
+  } finally {
+    loader?.classList.add('hidden');
   }
 };
 
