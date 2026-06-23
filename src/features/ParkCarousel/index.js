@@ -6,10 +6,7 @@ import { fetchParksFromServer } from './gateways';
 
 let parksData = [];
 let currentIndex = CAROUSEL_CONFIG.START_INDEX;
-
 let track = null;
-let btnPrev = null;
-let btnNext = null;
 
 const updateCarouselPosition = () => {
   if (!track || parksData.length === 0) return;
@@ -38,9 +35,8 @@ const moveSlide = (direction) => {
 
 export const initParkCarousel = async () => {
   track = document.getElementById(CAROUSEL_SELECTORS.TRACK_ID);
-  btnPrev = document.getElementById(CAROUSEL_SELECTORS.PREV_BTN_ID);
-  btnNext = document.getElementById(CAROUSEL_SELECTORS.NEXT_BTN_ID);
-
+  const btnPrev = document.getElementById(CAROUSEL_SELECTORS.PREV_BTN_ID);
+  const btnNext = document.getElementById(CAROUSEL_SELECTORS.NEXT_BTN_ID);
   const loader = document.getElementById('global-loader');
 
   if (!track) return;
