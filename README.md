@@ -6,6 +6,11 @@ The project is built using clean JavaScript (ES6+) following a modular feature-b
 
 ---
 
+## 🔗 Live Demo
+[View the Live Project](https://i1yaremechko.github.io/national-parks-carousel/)
+
+---
+
 ## 🚀 Features
 
 * **Real-time Data:** Complete integration with the official government United States National Park Service API.
@@ -25,8 +30,6 @@ The project is built using clean JavaScript (ES6+) following a modular feature-b
 * **Data Source:** [NPS API Documentation](https://www.nps.gov/subjects/developer/api-documentation.htm)
 
 ---
-
-## 📂 Project Structure
 
 ## 📂 Project Structure
 
@@ -53,16 +56,16 @@ national-parks-carousel/
   ```
 
 2. **Install the dependencies:**
-   ```bash
-   npm install
-   ```
+  ```bash
+  npm install
+  ```
 
 3. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
+  ```bash
+  npm run dev
+  ```
 
-   The application will automatically open in your browser at http://localhost:3000/.
+  The application will automatically open in your browser at http://localhost:3000/.
 
 ---
 
