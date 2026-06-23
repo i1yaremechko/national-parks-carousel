@@ -1,7 +1,7 @@
 import '../../styles/index.scss';
 
+import { CAROUSEL_CONFIG, CAROUSEL_SELECTORS } from '@common/constants';
 import { renderParkCard } from './components/renderParkCard';
-import { CAROUSEL_CONFIG, CAROUSEL_SELECTORS } from './constants';
 import { fetchParksFromServer } from './gateways';
 
 let parksData = [];
