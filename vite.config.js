@@ -1,11 +1,20 @@
-import { resolve } from 'path';
+import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: './',
+  base: './', 
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler'
+      }
+    }
+  },
   resolve: {
     alias: {
-      '@common': resolve(__dirname, './src/common')
+      '@common': fileURLToPath(new URL('./src/common', import.meta.url)),
+      '@features': fileURLToPath(new URL('./src/features', import.meta.url)),
+      '@styles': fileURLToPath(new URL('./src/styles', import.meta.url))
     }
   },
   server: {
