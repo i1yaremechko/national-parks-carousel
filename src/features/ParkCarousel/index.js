@@ -1,3 +1,5 @@
+import '../../styles/index.scss';
+
 import { renderParkCard } from './components/renderParkCard';
 import { CAROUSEL_CONFIG, CAROUSEL_SELECTORS } from './constants';
 import { fetchParksFromServer } from './gateways';
@@ -56,3 +58,5 @@ export const initParkCarousel = async () => {
     console.error('Error initializing park carousel:', error.message);
   }
 };
+
+initParkCarousel();
