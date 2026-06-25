@@ -1,4 +1,4 @@
-export const API_KEY = 'Kbpyz8qlfOkDdCVJ295SMOOf7TYTtsbBMyTMgjAp';
+export const API_KEY = import.meta.env.VITE_API_KEY;
 export const BASE_URL = 'https://developer.nps.gov/api/v1';
 
 export const CAROUSEL_CONFIG = {
