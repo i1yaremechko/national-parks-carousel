@@ -1,4 +1,5 @@
 @use '@common/scss/variables.scss' as *;
+@use '@common/scss/breakpoints.scss' as *;
 
 .carousel-section {
   padding: 40px 0;
@@ -27,6 +28,23 @@
     gap: 20px;
     margin-top: 30px;
     justify-content: center;
+
+    @include respond-to('tablet') {
+      position: absolute;
+      top: 225px;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      margin-top: 0;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    @include respond-to('mobile') {
+      top: 150px;
+    }
   }
 
   &__btn {
@@ -40,6 +58,18 @@
     &:hover {
       background-color: $color-primary;
       color: $color-white;
+    }
+
+    @include respond-to('tablet') {
+      pointer-events: auto;
+      padding: 12px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($color-bg-light, 0.85);
+      backdrop-filter: blur(4px);
     }
   }
 }
@@ -76,6 +106,10 @@
     height: 450px;
     object-fit: cover;
     border-radius: 12px;
+
+    @include respond-to('mobile') {
+      height: 300px;
+    }
   }
 
   &__content {
@@ -103,6 +137,10 @@
     color: $color-text-main;
     font-size: 2.2rem;
     margin: 8px 0;
+
+    @include respond-to('mobile') {
+      font-size: 1.6rem;
+    }
   }
 
   &__button {
