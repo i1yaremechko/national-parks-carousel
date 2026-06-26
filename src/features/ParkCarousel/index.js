@@ -2,7 +2,7 @@ import '@styles/index.scss';
 
 import { CAROUSEL_CONFIG, CAROUSEL_SELECTORS } from '@common/constants';
 import { renderParkCard } from './components/renderParkCard';
-import { fetchParksFromServer } from './gateways';
+import { fetchParks } from './gateways';
 
 let parksData = [];
 let currentIndex = CAROUSEL_CONFIG.START_INDEX;
@@ -42,7 +42,7 @@ export const initParkCarousel = async () => {
   if (!track) return;
 
   try {
-    parksData = await fetchParksFromServer();
+    parksData = await fetchParks();
 
     track.innerHTML = parksData
       .map((park, index) => renderParkCard(park, index === currentIndex))

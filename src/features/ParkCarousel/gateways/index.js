@@ -1,10 +1,8 @@
-import { API_KEY, BASE_URL } from '@common/constants';
-
-export const fetchParksFromServer = async () => {
-  const url = `${BASE_URL}/parks?limit=10`;
+export const fetchParks = async () => {
+  const url = `${import.meta.env.VITE_API_BASE_URL}/parks?limit=10`;
   const response = await fetch(url, {
     headers: {
-      'X-Api-Key': API_KEY
+      'X-Api-Key': import.meta.env.VITE_API_KEY,
     },
   });
 
